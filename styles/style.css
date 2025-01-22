@@ -1,6 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+.montserrat-responsive{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color:rgb(15, 15, 45);
+    color: white;
+    padding:0 70px 0 80px;
+}
+.logo .head1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.nav-menu{
+    display: flex;
+    
+}
+.nav-menu .nav-item{
+        list-style: none;
+        margin-left: 1.25rem;
+}
+.nav-menu .nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.nav-menu .nav-link:hover,.active{
+    background-color: rgba(128, 128, 128, 0.659);
+}
+.menu-btn{
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+   
+}
+#click{
+    display: none;
+}
+ 
+.banner{
+    background-image: url("../assets/banner.jpg");
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* media quary applied */
+@media only screen and (max-width:688px){
+      .navbar{
+        padding: 0 20px;
+      }  
+    .nav-menu{
+         position: fixed; 
+         top:70px;
+         left: -100%;
+         background-color:rgb(12, 12, 40);  
+         height: 100vh;
+         width: 100%;
+         flex-direction: column;
+         text-align: center;
+         padding-top: 20px;
+         transition: all 0.5s ease;
+        }
+        .logo .head1{
+            font-size: 1.5rem;
+        }
+        #click:checked ~ .menu-btn i::before{
+            content:"\f00D";
+        }
+
+        #click:checked ~.nav-menu{
+           left: 0%;
+        }
+        .menu-btn{
+            display: block;
+        }
+        .nav-menu .nav-item{
+            
+            margin: 30px 0;
+        }
+        .nav-menu .nav-link:hover{
+            color: red;
+        }
+        .banner{
+            width: 100%;
+        }
 }
