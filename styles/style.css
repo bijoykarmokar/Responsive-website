@@ -65,6 +65,45 @@
     background-position: center;
 }
 
+
+/* main section has started */
+
+.secvice{
+    background-color: #161216;
+}
+.service-parent{
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    
+}
+.secvice .head2{
+    font-size:40px;
+    font-weight: 700;
+    text-align: center;
+    color: aliceblue;
+    padding: 80px;
+}
+.single-service{
+    color:black;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid green;
+    box-shadow: 3px 3px 10px gray;
+}
+.single-service i{
+    padding-top: 15px;
+    font-size: 40px;
+    color: cadetblue;
+}
+.single-service .head3{
+    font-size: 25px;
+    margin: 15px;
+}
 /* media quary applied */
 @media only screen and (max-width:688px){
       .navbar{
@@ -105,4 +144,40 @@
         .banner{
             width: 100%;
         }
+
+        /* section responsive */
+        .service-parent{
+            width: 100%;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .single-service{
+            padding: 3px 5px;
+        }
+        .single-service i{
+            font-size: 25px;
+        }
+
+        .single-service .head3{
+            font-size: 20px;
+        }
+
+}
+
+@media only screen and (min-width:689px) and (max-width:1050px){
+             .service-parent{
+                width: 100%;
+                grid-template-columns: repeat(2,1fr);
+                gap: 15px;
+             }
+             .single-service{
+                padding: 5px 7px;
+            }
+             .single-service i{
+                font-size: 25px;
+            }
+            .single-service .head3{
+                font-size: 20px;
+            }
+
 }
